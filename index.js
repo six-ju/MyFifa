@@ -8,7 +8,7 @@ $(document).ready(function(){
 })
 
 function fifa(id){
-    let API_KEY = config.API_KEY;
+    let API_KEY = config.fifaKey;
     let characterName = `${id}`;
     let ouId = "https://open.api.nexon.com/fconline/v1/id?nickname=" + characterName;
 
@@ -23,7 +23,7 @@ function fifa(id){
 }
 
 function fifaUser(data){
-    let API_KEY = config.API_KEY;
+    let API_KEY = config.fifaKey;
     let userInfo = "https://open.api.nexon.com/fconline/v1/user/basic?ouid=" + data.ouid;
     let answers = fetch(userInfo, {
         headers:{
